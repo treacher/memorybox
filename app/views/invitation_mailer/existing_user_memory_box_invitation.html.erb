@@ -1,0 +1,13 @@
+<p>Hello <%= @invited_user.first_name.nil? ? @invited_user.email : @invited_user.first_name.capitalize %>,</p>
+
+<p><strong><%= @inviting_user.first_name.capitalize %> <%= @inviting_user.last_name.capitalize %></strong> has sent you an invitation to one of their MemoryBoxes.</p>
+
+<% if @message.present? %>
+<p>Invitation message:</p>
+<em>"<%= @message %>"</em>
+<% end %>
+
+<p>Check out your <%= link_to 'invitations', 'http://www.memoryboxapp.com/#/invitations' %> page to find out more.</p>
+
+<p>Thanks!</p>
+<p>The MemoryBox Team</p>

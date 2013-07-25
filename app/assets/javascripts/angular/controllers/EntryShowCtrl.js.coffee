@@ -1,0 +1,2 @@
+angular.module("MemoryBoxApp").controller "EntryShowCtrl", ($scope, Entry, MemoryBox, $http, $routeParams, $location) ->
+	$scope.entry = Entry.get(memory_box_id: $routeParams.memory_box_id, id: $routeParams.id)

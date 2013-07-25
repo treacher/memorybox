@@ -1,0 +1,32 @@
+<div class="row memory-box-index" ng-controller="MemoryBoxIndexCtrl">
+	<div sticky class="sticky panel large-12 columns">
+		<div class="row">
+			<div class="large-9 small-12 columns">
+				<h2 class="left">Your MemoryBoxes.</h2>
+			</div>
+
+			<div class="large-3 small-12 columns">
+			  <div class="row">
+			    <div class="large-10 small-5 small-centered columns">
+			      <ul class="button-group">
+			        <li class="right">
+			        	<a class="expand small button" href="#/memory_boxes/new">Add</a> 
+			        </li>
+			      </ul>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="large-12 columns gallery-container">
+		<ul class="large-block-grid-3 small-block-grid-1 masonry">
+			<li class="masonry-item" ng-repeat="memory_box in memory_boxes | filter:search | orderBy:'-created_at'">
+				<a ng-click="goToMemoryBox($event, memory_box.id)" href="javascript:;">
+					<div back-img="{{setWidth(memory_box.preview_image, 370)}}" class="photo-wrapper" ></div>
+				  <p class="text-center" ng-cloak >{{memory_box.title}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

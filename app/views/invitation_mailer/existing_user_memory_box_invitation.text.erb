@@ -1,0 +1,13 @@
+Hello <%= @invited_user.first_name.nil? ? @invited_user.email : @invited_user.first_name.capitalize %>,
+
+<%= @inviting_user.first_name.capitalize %> <%= @inviting_user.last_name.capitalize %> has sent you an invitation to one of their MemoryBoxes.
+
+<% if @message.present? %>
+Invitation message:
+<%= @message %>
+<% end %>
+
+Check out your invitations page: http://www.memoryboxapp.com/#/invitations , to find out more.
+
+Thanks!
+The MemoryBox Team

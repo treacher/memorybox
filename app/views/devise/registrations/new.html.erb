@@ -1,0 +1,24 @@
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+  <div data-alert class="alert-box secondary">
+    The password you use on MemoryBox will be encrypted and stored in a secure database.
+    <a href="#" class="close">&times;</a>
+  </div>
+
+  <fieldset>
+	  <legend>Sign up</legend>
+	  <div class="form-inputs">
+	  	<%= f.input :first_name, :required => true, :autofocus => true %>
+    	<%= f.input :last_name, :required => true %>
+	    <%= f.input :email, :required => true %>
+	    <%= f.input :password, :required => true %>
+	    <%= f.input :password_confirmation, :required => true %>
+	  </div>
+
+	  <div class="form-actions">
+	  	<p class="panel terms columns twelve">By clicking Sign up, you agree to our <%= link_to "Terms and conditions", terms_path %> and that you have read our <%= link_to "Privacy Policy", privacy_path %></p>
+	    <%= f.button :submit, "Sign up", {class: "right no-bot-margin"} %>
+	  </div>
+	</fieldset>
+<% end %>
+<%= render "devise/shared/links" %>

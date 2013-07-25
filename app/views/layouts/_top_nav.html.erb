@@ -1,0 +1,62 @@
+<div class="contain-to-grid" ng-controller="NavigationCtrl">
+  <nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a id="logo" href="/" >MemoryBox.<span>open beta</span></a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href=""><span></span></a></li>
+  </ul>
+   <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <% if current_user %>
+      <ul id="push-<%= current_user.pusher_id %>" class="left pusher">
+        <li class="divider"></li>
+        
+        <li class="has-dropdown">
+          <a href="#">MemoryBoxes</a>
+          <ul class="dropdown">
+            <li class="divider"></li>
+            <li><%= link_to "Your MemoryBoxes", "/#/", {class: "compact-on-click"} %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Shared MemoryBoxes", "/#/shared_memories", {class: "compact-on-click"} %></li>
+            <li class="divider"></li>
+          </ul>
+        </li>
+        
+        <li class="divider"></li>
+
+        <li ng-class="{active: isActive('/invitations')}">
+          <a href="/#/invitations" class="compact-on-click">Your Invitations<span ng-cloak ng-hide="invitationCount == 0" class="notification ng-cloak">({{invitationCount}})</span></a>
+        </li>
+        <li class="divider"></li>
+      </ul>
+    <% end %>
+    <% if current_user %>
+      <ul class="right">
+        <li class="divider hide-for-small"></li>
+        <li class="<%= current_page?(edit_user_registration_path) ? 'active' : '' %>" >
+          <%= link_to "Account", edit_user_registration_path %>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        </li>
+        <li class="divider"></li>
+      </ul>
+    <% else %>
+      <ul class="right">
+        <li class="divider hide-for-small"></li>
+        <li class="<%= current_page?(new_user_session_path) ? 'active' : '' %>" >
+          <%= link_to "Sign in", new_user_session_path %>
+        </li>
+        <li class="divider"></li>
+        <li class="<%= current_page?(new_user_registration_path) ? 'active' : '' %>" >
+          <%= link_to "Sign up", new_user_registration_path %>
+        </li>
+        <li class="divider"></li>
+      </ul>
+    <% end %>
+  </nav>
+</div>

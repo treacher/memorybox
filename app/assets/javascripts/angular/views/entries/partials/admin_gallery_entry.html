@@ -1,0 +1,9 @@
+<a id='entry-{{entry.id}}' ng-click="goToEntry($event, memory_box.id, entry.id)" href="javascript:;">
+	 <div back-img="{{setWidthAndJpg(entry.media_url, 370)}}" class="photo-wrapper" >
+	 </div>
+   <p class="text-center" ng-show="!inEditMode" ng-cloak ng-hide="inEditMode">{{entry.description}}</p>
+</a>
+<button ng-show="inEditMode" ng-hide="!inEditMode" ng-click="destroyEntry(entry.id)" class="delete-button alert expand small">Delete photo</button>
+<form class='simple-form' ng-submit="update(entry)">
+  <input update id="description" type='text' placeholder='Description...' ng-show="inEditMode" ng-hide="!inEditMode" ng-model='entry.description'/>
+</form>

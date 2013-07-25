@@ -1,0 +1,63 @@
+<div class="row entry-gallery" ng-controller="EntryGalleryCtrl">
+  <div sticky class="sticky panel large-12 columns">
+    <div class="row">
+      <div class="large-8 small-12 columns">
+        <h2 class="left" ng-show="!inEditMode" ng-cloak ng-hide="inEditMode">{{memory_box.title}}</h2>
+        <form class='simple-form title-form' ng-submit="update(memory_box)">
+          <input update-title id="title" type='text' placeholder='Memory box title...' ng-show="inEditMode" ng-hide="!inEditMode" ng-model='memory_box.title'/>
+        </form>
+      </div>
+      <div data-ng-include data-src="buttonPanel()"></div>
+    </div>
+  </div>
+
+  <div class="large-12 columns">
+    <div class="large-12 columns">
+      <div class="progress push-2 large-8 round">
+        <span class="meter"></span>
+      </div>
+    </div>
+  </div>
+  
+    <div class="large-9 columns gallery-container">
+      <ul gallery class="large-block-grid-3 small-block-grid-1">
+        <li class="gallery-item" ng-repeat="entry in entries | filter:search | orderBy:'-created_at'">
+          <div data-ng-include data-src="galleryEntry()"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="side-bar large-3 columns">
+      <div class="panel">
+        <div class="section">
+          <p class="subtitle">Owner:</p>
+          {{memory_box.owner}}
+        </div>
+        <div ng-hide="memory_box.invited_users.length == 0" class="section">
+          <p class="subtitle">Invited viewers:</p>
+          <ul>
+            <li ng-repeat="user in memory_box.invited_users">
+              {{user}}
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <button ng-cloak ng-show="memory_box.admin" confirm-destroy-memory-box class="expand ng-cloak small">Delete MemoryBox</button>
+          <button ng-cloak ng-show="!memory_box.admin" confirm-leave-memory-box class="expand ng-cloak small">Leave MemoryBox</button>
+        </div>
+        <div class="section">
+          <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-4615828632460075";
+            /* Ad */
+            google_ad_slot = "1173360741";
+            google_ad_width = 200;
+            google_ad_height = 200;
+            //-->
+            </script>
+            <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div>
+      </div>
+    </div>
+
+</div>

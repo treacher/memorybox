@@ -1,0 +1,12 @@
+user = User.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+user.families.create!(name: "Treacher")
+user.families.create!(name: "Rea")
+user.families.create!(name: "Dickson")
+user.families.create!(name: "Massee")
+user.families.create!(name: "Trilford")
+
+family = Family.find_by_name("Treacher")
+family.albums.create!(title: "First steps")
+family.albums.create!(title: "Second steps")
+family.albums.create!(title: "Third steps")
+family.albums.create!(title: "Potty training")

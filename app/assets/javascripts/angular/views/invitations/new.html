@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="twelve columns invitations-new" ng-controller="InvitationCreateCtrl">
+		<div class="large-8 large-centered columns">
+			<form class='simple-form' ng-submit="sendInvitations(invitation.emails, invitation.message)">
+			  <fieldset>
+			    <legend class='small'>Share MemoryBox: <span ng-cloak>{{memory_box.title}}</span></legend>
+			    <label>Email addresses:</label>
+			    <textarea id="emails"type='text' placeholder='Enter comma seperated emails of users you wish to invite...' ng-model='invitation.emails' required/>
+			    <p class="note">Note: If you want to invite more than one user seperate each email by a comma.</p>
+					<label>Message:</label>
+			    <textarea type='text' placeholder='Message...' ng-model='invitation.message'/>
+			    <button class="button small no-bot-margin" ng-disabled="createButtonDisabled"  type="submit">Send Invitations</button>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>

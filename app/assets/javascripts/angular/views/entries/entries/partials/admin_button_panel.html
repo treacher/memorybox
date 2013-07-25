@@ -1,0 +1,20 @@
+<div class="large-4 small-12 columns">
+  <div class="row">
+    <div class="large-10 small-12 small-centered large-right columns">
+      <ul class="button-group">
+        <li class="right">
+          <a class="button expand small" ng-show="!inEditMode" ng-hide="inEditMode" ng-click="setEditMode(true)" href="javascript:;">Edit</a>
+        </li>
+        <li class="right">
+          <a class="button expand small" ng-show="inEditMode" ng-hide="!inEditMode" ng-click="setEditMode(false)" href="javascript:;">Done</a>
+        </li>
+        <li class="right">
+          <a class="expand button small" href="#/memory_boxes/{{memory_box_id}}/invitations/new">Invite</a>
+        </li>
+        <li class="right">
+          <a uploader class="expand small button" id="uploadFiles" href="javascript:;">Add</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="twelve columns" ng-controller="MemoryBoxCreateCtrl">
+		<div class="large-6 large-centered columns">
+			<form class='simple-form' ng-submit="createBox(memory_box)">
+			  <fieldset>
+			    <legend>MemoryBox</legend>
+			    <label>Title</label>
+			    <input type='text' placeholder='Title' ng-model='memory_box.title' required/>
+			    <button class="button no-bot-margin" ng-disabled="createButtonDisabled"  type="submit">Create</button>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>

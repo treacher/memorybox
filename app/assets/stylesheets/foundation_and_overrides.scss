@@ -1,0 +1,436 @@
+@import "foundation";
+/*
+	General overwrites
+*/
+html, body  {
+	height: 100%;
+}
+body {
+	overflow-x: hidden;
+}
+h2 {
+	margin: 0 !important;
+	line-height: 1.1 !important;
+}
+legend {
+	font-size: 2em;
+	span {
+		font-weight: normal;
+	}
+}
+legend.small {
+	font-size: 1.6em;
+}
+form {
+	margin: 1em 0 0 0;
+}
+p {
+	margin: 0;
+}
+p.note {
+	font-size: 0.75em;
+	color: grey;
+}
+.button, button {
+	margin: 0;
+}
+nav.top-bar a span.notification {
+	margin-left: 5px;
+	color: #CC0000;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+.entry-gallery {
+	form {
+	  margin: 0.25em 0 0;
+	}
+	.delete-button {
+		margin-top: -2px;
+	}
+}
+footer {
+	font-size: 0.9em;
+	p {
+		margin-bottom: 1em;
+	}
+	ul {
+		list-style: none;
+	}
+}
+.container {
+	height: 100%
+}
+input.boolean {
+	margin-right: 5px;
+}
+.no-pad {
+	padding: 0 !important;
+}
+/* 
+	Gallery view
+*/
+.memory-box-index ul.button-group li,
+.entry-gallery ul.button-group li 
+{
+	width: 33.3333333%;
+}
+ul.button-group {
+	padding-top: 5px;
+	z-index: 3;
+}
+img {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5em;
+}
+#logo span {
+	color: #2ba6cb;
+	font-size: 13px;
+	margin-left: 5px;
+	font-weight: normal;
+}
+.contain-to-grid .top-bar, .top-bar {
+	margin-bottom: 1em;
+}
+.panel {
+	margin-bottom: 1em;
+	padding: 1em;
+}
+.image-wrapper {
+	padding: 0 1em;
+	margin: 0 auto;
+}
+.sticky {
+	z-index: 2;
+}
+form.title-form {
+	font-size: 1.3125em;
+	margin: 0;
+}
+.title-form input {
+	margin: 0;
+}
+.progress {
+	display: none;
+	margin-top: -25px;
+	margin-bottom: 20px;
+}
+.photo-wrapper {
+	width: 100%;
+	height: 320px;
+	border: 1px solid pink;
+	background-position: 50% 25%;
+	-webkit-transition-property: width, height;
+	-webkit-transition-duration: 500ms;
+	border: 1px solid #333;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	margin-bottom: 0.25em;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.invitations table {
+	width: 100%
+}
+.invitations ul.button-group {
+	padding: 0;
+}
+.invitations ul.button-group li {
+	width: 50%;
+}
+.invitations-new textarea {
+	margin-bottom: 5px;
+	height: 150px;
+}
+.invitations-new textarea#emails {
+	height: 100px;
+}
+.invitations-new fieldset p{
+	font-size: 0.8em;
+	line-height: 1;
+	margin-bottom: 1em;
+}
+.invitations-new button {
+	margin-top: 5px;
+}
+
+/* Entries side bar */
+
+.side-bar {
+	font-size: 15px;
+	padding-right: 0;
+}
+.side-bar p.subtitle {
+	font-weight: bold;
+}
+.side-bar .section {
+	margin-bottom: 10px;
+}
+.side-bar .section ul {
+	list-style: none;
+	margin: 0;
+}
+.side-bar .section .button {
+	display: none;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+table.responsive {
+	table-layout: fixed;
+}
+
+table.responsive td {
+	white-space: normal !important;
+}
+
+/* Account edit page */
+.cancel-account {
+	margin-top: 12px;
+	em {
+		font-size: 0.8em;
+	}
+	a {
+		margin-top: 10px;
+	}
+}
+.field_with_hint {
+	input{
+		margin: 0;
+	}
+	span.hint {
+		font-size: 0.75em;
+		color: grey;
+	}
+	margin: 0 0 1em 0;
+}
+
+/* Static Pages */
+.static-pages {
+	h3 {
+		font-size: 1.2em;
+		margin-top: 15px;
+		margin-bottom: 5px;
+		font-weight: bold;
+		margin: 0 0 1px;
+		color: #333;
+	}
+	p {
+		line-height: 22px;
+		margin: 0 0 14px;
+		font-size: 1em;
+		color: #555;
+	}
+	ol {
+		margin-left: 25px;
+	}
+	ul {
+		margin-left: 25px;
+	}
+	li {
+		line-height: 22px;
+		margin: 0 0 14px;
+		font-size: 1em;
+		color: #555;
+	}
+}
+
+.panel.terms {
+	font-size: 0.7em;
+	line-height: 1.1em;
+	padding: 0.8em;
+}
+
+/* Home page */
+
+section#hero,
+section#social-media,
+section#three-up
+{
+	box-shadow: 0 0 0 1px #ddd;
+	border: 1px white solid;
+}
+
+#hero {
+	padding: 20px;
+	background: #F5F5F5;
+}
+
+#social-media {
+	margin: 0 auto;
+	padding: 6px;
+	background: #EFEFEF;
+	ul {
+		list-style: none;
+		text-align: center;
+		margin: 0;
+	}
+	li {
+		display: inline-block;
+		padding: 5px 8px;
+		line-height: 1;
+		float: none;
+	}
+	table {
+		margin: 0 auto;
+		background: transparent;
+		border: none;
+		td {
+			vertical-align: middle;
+		}
+	}
+}
+/* Facebook widget hack */
+.vTop {
+	vertical-align: middle !important;
+}
+
+#three-up {
+	background: #F5F5F5;
+	padding: 20px;
+	h4, p {
+		text-align: center;
+	}
+	p {
+		text-shadow: 0px -1px #fff;
+	}
+	img {
+		height: 200px;
+	}
+}
+
+.hero-container {
+	margin: 0 auto;
+	h1 {
+		font-size: 8em;
+		line-height: 1;
+		letter-spacing: -2px;
+		margin: 10px 0;
+		text-align: center;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+	p.hero-description {
+		font-size: 2.5em;
+		font-weight: 200;
+		line-height: 1.25;
+		text-align: center;
+	}
+	p.hero-signup {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 1024px){
+  .gallery-container {
+		padding: 0;
+	}
+	.sticky-wrapper .sticky {
+		width: 1000px;
+	}
+	.large-right,
+	.columns.large-right {
+		float: right !important;
+	}
+	footer.row {
+		max-width: 1000px;
+	}
+	.body {
+		height: 80%;
+	}
+}
+
+@media screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) {
+	.hero-container {
+		h1 {
+			font-size: 6em;	
+		}
+	}
+	.photo-wrapper {
+		height: 250px;
+	}
+	.gallery-container {
+		padding: 0 20px;
+	}
+	.side-bar {
+		padding: 0;
+		width: 22%;
+		margin-right: 20px;
+	}
+	.body {
+		height: 86%;
+	}
+	.hide-for-small {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 640px){
+	.hero-container {
+		h1 {
+			font-size: 3em;
+		}
+		p.hero-description {
+			font-size: 1.5em;
+		}
+	}
+	#social-media {
+		ul {
+			padding: 6px;	
+		}
+		overflow: hidden;
+	}
+	.no-pad-small {
+		padding: 0 !important;
+	}
+	h2{
+  	width: 100%;
+  	text-align: center;
+  }
+  .contain-to-grid .top-bar, .top-bar {
+		margin-bottom: 0;
+	}
+	.full-image-view img{
+		padding-top: 1em;
+	}
+	.add-mem-button {
+		margin-top: 0.5em;
+	}
+	.memory-box-index ul.button-group li {
+		width: 100%
+	}
+	.invitations table tr {
+		height: 39px !important;
+	}
+	.invitations ul.button-group li {
+		width: 100%;
+	}
+	.invitations ul.button-group li:first-child {
+		margin-bottom: 6px;
+	}
+	/* Top bar */
+	.top-bar .name h1 a {
+		width: 65%;
+	}
+	.columns.small-center {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		float: none !important;
+	}
+	footer {
+		font-size: 0.75em;
+		p {
+			text-align: center;
+		}
+		ul {
+			margin-left: -5px !important;
+			text-align: center;
+		}
+	}
+}

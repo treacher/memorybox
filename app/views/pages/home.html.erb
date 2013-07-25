@@ -1,0 +1,73 @@
+<div class="twelve columns no-pad-small">
+	<section id="hero">
+		<div class="row">
+		  <div class="twelve columns hero-container">
+		    <h1>MemoryBox.</h1>
+		    <p class="hero-description">is a privacy driven application for storing and sharing your photographic memories.</p>
+		    <p class="hero-signup"><%= link_to "Sign up for free", new_user_registration_path, {class: "large success round button hero-signup" } %></p>
+		  </div>
+	  </div>
+	</section>
+
+	<section id="social-media">
+		<div class="row">
+			<div class="twelve columns">
+				<table>
+					<tr>
+						<td>
+							<a href="https://twitter.com/memoryboxdot" class="twitter-follow-button" data-show-count="false" data-size="large"></a>
+					
+						</td>
+						<td>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-via="memoryboxdot" data-size="large" data-count="none" data-hashtags="memoryboxdot"></a>
+						</td>
+						<td>
+							<div class="fb-like" data-href="https://www.facebook.com/pages/Memorybox/470180303057339" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false" data-font="trebuchet ms"></div>
+							<div id="fb-root"></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section id="three-up">
+		<div class="row">
+			<div class="large-4 columns">
+	      <img src="<%=asset_path('box.png')%>">
+	      <h4>Create a MemoryBox.</h4>
+	      <p>
+	      	A MemoryBox is a safe place for you to store your treasured memories. There is no limit to how many MemoryBoxes you can create. You can have a MemoryBox for every occasion.
+	      </p>
+	    </div>
+	    <div class="large-4 columns">
+	      <img src="<%=asset_path('polaroids.png')%>">
+	      <h4>Add photos</h4>
+	      <p>
+	      	Storing photographic memories in MemoryBox could not be easier. Once you have created a MemoryBox it is just a matter of clicking 'Add'. There is no limit to how many photos you can upload &amp; you can upload multiple photos at a time.
+	    	</p>
+	    </div>
+	    <div class="large-4 columns">
+	      <img src="<%=asset_path('share.png')%>">
+	      <h4>Share</h4>
+	      <p>
+	      	Sharing in MemoryBox as simple as clicking the 'Share' button. Each MemoryBox has it's own unique list of viewers. This means that when you share your MemoryBox with some one they can only see the MemoryBox that you share with them.
+	    	</p>
+	    </div>
+	  </div>
+	</section>
+</div>
+
+		<script>
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	</script>

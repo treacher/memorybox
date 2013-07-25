@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: family_albums_development
+  pool: 5
+  username: root
+  password:
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: family_albums_test
+  pool: 5
+  username: root
+  password:
+
+cucumber:
+  <<: *test

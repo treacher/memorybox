@@ -1,0 +1,61 @@
+<div class="row invitations" ng-controller="InvitationsIndexCtrl">
+	<div class="large-12 columns"></div>
+		<div class="section-container auto" data-section>
+		  <section>
+		    <p class="title" data-section-title><a href="#received">Received <span ng-cloak ng-show="pendingCount(received_invitations) > 0">({{pendingCount(received_invitations)}})</span></a></p>
+		    <div class="content" data-section-content>
+		    	<table class="responsive">
+		    	  <thead>
+		    	    <tr>
+		    	      <th>Inviter</th>
+		    	      <th>MemoryBox</th>
+		    	      <th>Status</th>
+		    	      <th>Action</th>
+		    	    </tr>
+		    	  </thead>
+		    	  <tbody>
+		    	  	<tr ng-repeat="invitation in received_invitations | orderBy:'-created_at'">
+		    	  		<td>{{invitation.sender_first_name + " " + invitation.sender_last_name}}</td>
+		    	  		<td>
+		    	  			<a href="/#/memory_boxes/{{invitation.memory_box_id}}/entries"> {{invitation.memory_box_title}}</a>
+		    	  		</td>
+		    	  		<td>{{invitation.status}}</td>
+		    	  		<td>
+		    	  			<ul ng-hide="invitation.status != 'pending'" class="button-group">
+		    	  				<li><button disable-on-click ng-click="acceptInvitation(invitation.id)" class="small expand">Accept</button></li>
+		    	  				<li><button disable-on-click ng-click="declineInvitation(invitation.id)" class="small expand">Decline</button></li>
+		    	  			</ul>
+		    	  		</td>
+		    	  	</tr>
+		    	  </tbody>
+		    	</table>
+		    </div>
+		  </section>
+		  <section>
+		    <p class="title" data-section-title><a href="#sent">Sent <span ng-cloak ng-show="pendingCount(sent_invitations) > 0">({{pendingCount(sent_invitations)}})</span></a></p>
+		    <div class="content" data-section-content>
+		      <table class="responsive">
+		        <thead>
+		          <tr>
+		            <th>Invited</th>
+		            <th>MemoryBox</th>
+		            <th>Status</th>
+		            <th>Action</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		        	<tr ng-repeat="invitation in sent_invitations | orderBy:'-created_at'">
+		        		<td>{{invitation.receivers_email}}</td>
+		        		<td>
+		        			<a href="/#/memory_boxes/{{invitation.memory_box_id}}/entries"> {{invitation.memory_box_title}}</a>
+		        		</td>
+		        		<td>{{invitation.status}}</td>
+		        		<td><button disable-on-click ng-hide="invitation.status != 'pending'" class="small expand" ng-click="retractInvitation(invitation.id)">Retract Invitation</button></td>
+		        	</tr>
+		        </tbody>
+		      </table>
+		    </div>
+		  </section>
+		</div>
+	</div>
+</div>

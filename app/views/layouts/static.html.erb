@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <title>MemoryBox.</title>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <%= render "layouts/meta" %>
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <%= render "layouts/top_nav" %>
+      </header>
+      <div class="body row">
+        <%= yield %>
+      </div>
+      <%= render "layouts/footer" %>
+    </div>
+    <%= render "layouts/ga" if Rails.env.production? %>
+    <script>
+      (function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/QLm1bxw51RvRF9ZF1ppq9w.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()
+    </script>
+  </body>
+  <%= javascript_include_tag "vendor/custom.modernizr" %>
+  <%= javascript_include_tag "home" %>
+</html>
